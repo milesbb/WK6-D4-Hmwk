@@ -563,7 +563,6 @@
         NEW_ROW.appendChild(NEW_TRACK_NO)
         const NEW_TRACK_TITLE = document.createElement("td")
         NEW_TRACK_TITLE.innerText = document.getElementById("title").value;
-        document.getElementById("title").value = "";
         NEW_ROW.appendChild(NEW_TRACK_TITLE)
         const NEW_TRACK_DUR = document.createElement("td")
         NEW_TRACK_DUR.innerText = document.getElementById("duration").value
@@ -583,6 +582,8 @@
           NEW_ROW.remove();
         });
         NEW_TRACK_BUTTON.appendChild(NEW_DEL_BUT);
+        alert("New track '" + document.getElementById("title").value + "' added!");
+        document.getElementById("title").value = "";
       });
 
     </script>
