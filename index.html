@@ -16,20 +16,157 @@
       crossorigin="anonymous"
     />
     <title>Miles' Music</title>
-  </head>
-  <body class="text-center">
-    <header class="container">
-      <div class="row text-center">
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#about">About Me</a></div>
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#fava">Favorite Albums</a></div>
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#arev">Album Review</a></div>
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#wa">Worst Albums</a></div>
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#favar">Artist Spotlight</a></div>
-        <div class="mx-auto col-xl-2 col-md-4 col-sm-6"><a href="#morea">More Albums</a></div>
-      </div>
-    </header>
+    <style>
+      .jumbotron {
+        background-image: url("images/collageAlbums.webp");
+        background-size: contain;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-radius: 0;
+    /* border: 1rem solid #019a7d; */
+    }
 
-    <h1 class="my-5">Miles' Top Music Picks</h1>
+    .jumboInner {
+      background-color: #3c6f64;
+      color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 60%;
+      margin: auto;
+    }
+
+    .diasporaCol {
+      background-color: #019a7d;
+      color: white;
+    }
+
+    .greyCol {
+      background-color: gray;
+      color: white;
+    }
+
+    .navCol {
+      background-color: #bee2db;
+
+    }
+
+    .creamCol {
+      background-color: #fdfbf2;
+      color: brown;
+    }
+    .card {
+      position: relative;
+    }
+
+    .input-group-text {
+      background: none;
+      border: none;
+      width: 6rem;
+    }
+
+    .form-control {
+      /* width: rem; */
+    }
+
+    .scaryBack {
+      background-image: url("images/scary background.jpeg");
+      background-size: contain;
+      border-radius: 0.5rem;
+      border: 2px solid darkred;
+      color: white;
+      padding: 3rem;
+    }
+
+    .scaryInner {
+      background-color: black;
+      border: 1px solid red;
+      width: 40%;
+      border-radius: 0.5rem;
+      margin: auto;
+    }
+
+    .btn-success {
+      box-shadow: 0px 0px 0px 0px lightgray;
+      width: 7rem;
+      height: 2.5rem;
+      transition: box-shadow 0.1s;
+      transition: width 0.1s;
+      transition: height 0.1s;
+    }
+
+    .btn-success:hover {
+      box-shadow: 0px 4px 5px 4px lightgray;
+      width: 7.1rem;
+      height: 2.6rem;
+
+    }
+
+    .badge {
+      position: absolute;
+      font-size: 1.2rem;
+      top: -0.8rem;
+      left: -0.8rem;
+    }
+
+    tbody>tr:hover .btn-danger {
+      visibility: visible;
+    }
+
+    .btn-danger {
+      visibility: hidden;
+    }
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+    </style>
+  </head>
+
+  <body class="text-center">
+
+    <nav class="navbar navbar-expand-lg navbar-light navCol">
+      <img src="images/jukelogo.png" width="40rem" class="d-block mx-auto img-responsive mr-5">
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fava">Favorite Albums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#arev">Album Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#wa">Worst Albums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#favar">Artist Spotlight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#morea">More Albums</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron mt-5">
+      <div class="jumboInner">
+
+      
+      <h1 class="display-4">Miles' Jukebox</h1>
+      <p class="lead">Just a neat little website where you can check out my music tastes</p>
+      <hr class="my-4">
+      <iframe src="https://open.spotify.com/embed/track/2P3eaRpKOEs8WDyA4jiRfX?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </div>
 
     <h2 id="about">About Me</h2>
     <p class="my-4">
@@ -37,11 +174,12 @@
       alternative rock
     </p>
 
-    <h2 id="fava">Favorite Albums</h2>
+    <h2 id="fava" class="my-5">Favorite Albums</h2>
 
     <div class="container justify-content-center">
       <div class="row">
-        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0" style="width: 18rem">
+          <span class="badge badge-secondary">Rap</span>
           <img
             src="images/Call_Me_If_You_Get_Lost_album_cover.jpeg"
             class="card-img-top"
@@ -50,7 +188,7 @@
           <div class="card-body">
             <h5 class="card-title">Call Me If You Get Lost</h5>
             <p class="card-text">
-                by Tyler, the Creator<br>Rap<br>52:13
+                by Tyler, the Creator<br>52:13
               </p>
             <iframe
               src="https://open.spotify.com/embed/album/45ba6QAtNrdv6Ke4MFOKk9?utm_source=generator&theme=0"
@@ -63,7 +201,8 @@
           </div>
         </div>
 
-        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0 diasporaCol" style="width: 18rem">
+          <span class="badge badge-secondary">Rap/R&B/Afrobeat</span>
           <img
             src="images/Goldlink-DIASPORA-cover.png"
             class="card-img-top"
@@ -72,13 +211,14 @@
           <div class="card-body">
             <h5 class="card-title">Diaspora</h5>
             <p class="card-text">
-              by Goldlink<br>Rap/R&B/Afrobeat<br>39:52
+              by Goldlink<br>39:52
             </p>
             <iframe src="https://open.spotify.com/embed/album/790qROmQ1y4aPEYLcSkScH?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
         </div>
 
-        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0 greyCol" style="width: 18rem">
+          <span class="badge badge-secondary">Rap</span>
           <img
             src="images/71vO8Mu4UeL._SS500_.jpg"
             class="card-img-top"
@@ -87,13 +227,14 @@
           <div class="card-body">
             <h5 class="card-title">Forbandede Ungdom</h5>
             <p class="card-text">
-                by Ukendt Kunstner<br>Rap<br>49:39
+                by Ukendt Kunstner<br>49:39
               </p>
               <iframe src="https://open.spotify.com/embed/album/2lCbFNOlIAGwncT3nvMwAD?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
         </div>
 
-        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+        <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0 creamCol" style="width: 18rem">
+          <span class="badge badge-secondary">Rap/R&B</span>
             <img
               src="images/Anderson_Paak_-_Ventura.png"
               class="card-img-top"
@@ -102,7 +243,7 @@
             <div class="card-body">
               <h5 class="card-title">Ventura</h5>
               <p class="card-text">
-                by Anderson .Paak<br>Rap/R&B<br>39:36
+                by Anderson .Paak<br>39:36
               </p>
               <iframe src="https://open.spotify.com/embed/album/0YF8PfcGbsKg5IaFyPnlyY?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
@@ -113,7 +254,7 @@
 
     <img src="images/64218016_1058578231002570_2412929506114273280_n.jpeg" class="img-fluid px-0">
 
-    <h3 class="my-5">Diaspora by Goldlink<br><br></h3>
+    <h3 class="mt-5">Diaspora by Goldlink<br><br></h3>
     <h3>Total Runtime: 39:52</h3>
     <h3>Rap/R&B/Afrobeat</h3>
 
@@ -124,106 +265,171 @@
             <th scope="col">Track Name</th>
             <th scope="col">Duration</th>
             <th scope="col">Play</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="navCol">
             <th scope="row">1</th>
             <td>//error</td>
             <td>0:23</td>
             <td><iframe src="https://open.spotify.com/embed/track/0UntHP0WH8l247JkR2FfBh?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>Joke Ting</td>
             <td>3:00</td>
             <td><iframe src="https://open.spotify.com/embed/track/6Ic2MP2hzoBLe3r1VIle8J?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">3</th>
             <td>Maniac</td>
             <td>3:09</td>
             <td><iframe src="https://open.spotify.com/embed/track/5uNhWDGP1gXxS2IZl2alGx?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>Days Like This</td>
             <td>2:48</td>
             <td><iframe src="https://open.spotify.com/embed/track/2qU9ro2FCa4WjFqTg1JFJP?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">5</th>
             <td>Zulu Screams</td>
             <td>2:57</td>
             <td><iframe src="https://open.spotify.com/embed/track/2YRDTr0reanrGZOTsWXdek?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">6</th>
             <td>More</td>
             <td>3:07</td>
             <td><iframe src="https://open.spotify.com/embed/track/794JoJJcwSIJ2XeLYsvltU?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">7</th>
             <td>Cokewhite</td>
             <td>3:25</td>
             <td><iframe src="https://open.spotify.com/embed/track/1jCzgZFEl8RCUxDRvAGWUF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">8</th>
             <td>U Say</td>
             <td>3:21</td>
             <td><iframe src="https://open.spotify.com/embed/track/2p37Mfy2PWajgOS3i2aaep?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">9</th>
             <td>Yard</td>
             <td>3:16</td>
             <td><iframe src="https://open.spotify.com/embed/track/7d4WkbOVqZ8KeQxtjTL3zi?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">10</th>
             <td>Spanish Song</td>
             <td>3:31</td>
             <td><iframe src="https://open.spotify.com/embed/track/4rKgnSL0OriKojAcS1rGQ9?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">11</th>
             <td>No Lie</td>
             <td>3:23</td>
             <td><iframe src="https://open.spotify.com/embed/track/224EQMt8CpNPV98j9L4iMJ?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">12</th>
             <td>Tiff Freestyle</td>
             <td>1:42</td>
             <td><iframe src="https://open.spotify.com/embed/track/790MIo6gDwdvmNsw8yDB5Q?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
-          <tr>
+          <tr class="navCol">
             <th scope="row">13</th>
             <td>Rumble</td>
             <td>3:11</td>
             <td><iframe src="https://open.spotify.com/embed/track/4nyWvinhAJrNL2zN87gZ9l?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
           <tr>
             <th scope="row">14</th>
             <td>Swoosh</td>
             <td>2:42</td>
             <td><iframe src="https://open.spotify.com/embed/track/7Lqkv1Z3D6iW5C12q7TRhy?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+            <td><button type="button" class="btn btn-danger">Remove Track</button></td>
           </tr>
         </tbody>
       </table>
 
+      <button type="button" class="btn btn-success my-4" data-toggle="modal" data-target="#exampleModal">Add Track</button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter track details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <div class="d-flex">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">No.</span>
+                  </div>
+                  <input type="text" id="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                  </div>
+                  <input type="text" id="title" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  
+                </div>
+                <div class="d-flex">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Artist</span>
+                  </div>
+                  <input type="text" id="artist" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Duration</span>
+                  </div>
+                  <input type="text" id="duration" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" id="addButton" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <p>An incredibly textured and layered album that blends emotions, melodies, and instruments from more high paced and abrasive rap and hip-hop with more traditional smoother afrobeat components. Must listen fo sho.</p>
 
     <h2 id="wa" class="my-5">Worst Albums</h2>
+    <div class="scaryBack">
 
-    <p
-    class="my-5">Behold...the worst albums in recorded human history...</p>
+    
+    
+
+    <p 
+    class="mb-5 text-danger scaryInner">Behold...the worst albums in recorded human history...</p>
 
     <div class="container justify-content-center">
         <div class="row">
-          <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+          <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0 bg-dark" style="width: 18rem">
             <img
               src="images/71Z0rLIvpuL._AC_SX466_.jpg"
               class="card-img-top"
@@ -232,13 +438,13 @@
             <div class="card-body">
               <h5 class="card-title">American Idiot</h5>
               <p class="card-text">
-                  by Greenday<br>Pop/Rock<br>57:12<br>Greenday sucks L + ratio
+                  by Greenday<br>Pop/Rock<br>57:12<br>Greenday sucks L + ratio smh
                 </p>
                 <iframe src="https://open.spotify.com/embed/album/5Qhn2FpGWmTjCuntF09j7g?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
           </div>
   
-          <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card" style="width: 18rem">
+          <div class="mx-auto col-xl-3 col-md-4 col-sm-6 card px-0 bg-dark" style="width: 18rem">
             <img
               src="images/The_Killers_-_Hot_Fuss.png"
               class="card-img-top"
@@ -254,6 +460,8 @@
           </div>
         </div>
       </div>
+
+    </div>
 
     <h2 id="favar" class="my-5">Artist Spotlight</h2>
       <h3>Meet... Steve Lacy</h3>
@@ -304,14 +512,80 @@
         </div>
     </footer>
 
-    <!-- <iframe
-      src="https://open.spotify.com/embed/playlist/1o4HRDn414rcVjCH2VhcNl?utm_source=generator"
-      width="100%"
-      height="380"
-      frameborder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    ></iframe> -->
+    
+    <script>
+      const DELETE_BUTTONS = document.querySelectorAll(".btn-danger");
+      const ROWS = document.querySelectorAll("tbody>tr");
+      for (let i = 0; i < DELETE_BUTTONS.length; i++) {
+        DELETE_BUTTONS[i].addEventListener("click", () => {
+          ROWS[i].remove();
+        });
+      };
+
+      const ADD_TRACK = document.getElementById("addButton");
+      
+      ADD_TRACK.addEventListener("click", () => {
+        const TRACK_INFO = document.getElementsByClassName("input-group-text");
+        const TABLE = document.getElementsByTagName("tbody")[0];
+        const NEW_ROW = document.createElement("tr")
+        // TABLE.appendChild(NEW_ROW)
+
+        const ALL_ROWS = document.querySelectorAll("tbody>tr");
+        ALL_ROWS[document.getElementById("number").value - 1].after(NEW_ROW)
+        let checker = true;
+        if (ALL_ROWS[document.getElementById("number").value - 1].classList.contains("navCol")) {
+          // for (let i = (document.getElementById("number").value + 1); i < ALL_ROWS.length; i++) {
+          //   if (checker === true) {
+          //     ALL_ROWS[i].classList.add("navCol");
+          //     checker = false;
+          //   } else {
+          //     ALL_ROWS[i].classList.remove("navCol");
+          //     checker = true;
+          //   }
+          // }
+        } else {
+          NEW_ROW.classList.add("navCol");
+          
+          // for (let i = (document.getElementById("number").value + 1); i < ALL_ROWS.length; i++) {
+          //   if (checker === true) {
+          //     ALL_ROWS[i].classList.remove("navCol");
+          //     checker = false;
+          //   } else {
+          //     ALL_ROWS[i].classList.add("navCol");
+          //     checker = true;
+          //   }
+          // }
+        }
+
+        const NEW_TRACK_NO = document.createElement("th")
+        NEW_TRACK_NO.innerText = document.getElementById("number").value;
+        document.getElementById("number").value = "";
+        NEW_ROW.appendChild(NEW_TRACK_NO)
+        const NEW_TRACK_TITLE = document.createElement("td")
+        NEW_TRACK_TITLE.innerText = document.getElementById("title").value;
+        document.getElementById("title").value = "";
+        NEW_ROW.appendChild(NEW_TRACK_TITLE)
+        const NEW_TRACK_DUR = document.createElement("td")
+        NEW_TRACK_DUR.innerText = document.getElementById("duration").value
+        document.getElementById("duration").value = "";
+        NEW_ROW.appendChild(NEW_TRACK_DUR)
+        const NEW_TRACK_PLAY = document.createElement("td")
+        NEW_TRACK_PLAY.innerText = "No Spotify Track Found"
+        NEW_ROW.appendChild(NEW_TRACK_PLAY)
+        const NEW_TRACK_BUTTON = document.createElement("td")
+        NEW_ROW.appendChild(NEW_TRACK_BUTTON)
+        const NEW_DEL_BUT = document.createElement("button");
+        NEW_DEL_BUT.classList.add("btn");
+        NEW_DEL_BUT.classList.add("btn-danger");
+        NEW_DEL_BUT.innerText = "Remove Track";
+        NEW_DEL_BUT.type = "button";
+        NEW_DEL_BUT.addEventListener("click", () => {
+          NEW_ROW.remove();
+        });
+        NEW_TRACK_BUTTON.appendChild(NEW_DEL_BUT);
+      });
+
+    </script>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script
