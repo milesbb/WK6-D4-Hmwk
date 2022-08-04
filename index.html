@@ -111,10 +111,13 @@
 
     tbody>tr:hover .btn-danger {
       visibility: visible;
+      opacity: 100;
     }
 
     .btn-danger {
       visibility: hidden;
+      transition: opacity 1s;
+      opacity: 0;
     }
   
 @keyframes fadeInAnimation {
